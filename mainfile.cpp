@@ -25,25 +25,11 @@ NOTES ON RSA ENCRYPTION:
 int main() {
 	
 	int encryptNumber;
+	int decryption;
 	
 	int n;
 	int e;	
 	int d; 
-	int decryption;
-	
-	cout << "Enter the letter index you want to encrypt." << endl <<
-			"e.g. A=1, B=2" << endl;
-	cin >> encryptNumber;
-	
-	while (encryptNumber > 26) {
-		
-		cout << "Invalid." << endl;
-		cin >> encryptNumber;
-		
-	} 
-	
-	//Converting to ASCII.
-	encryptNumber += 64;	
 	
 	cout << "Enter the n, or the product of your primes." << endl;
 	cin >> n;
@@ -53,7 +39,36 @@ int main() {
 	
 	d = inverseFinder(e, n);
 	
-	cout << encrypter(encryptNumber, e, n) << endl;
+	char userChoice;
+	cout << "Type 'd' to decrypt a message or 'e' to encrypt a message." << endl;
+	cin >> userChoice;
+	
+	switch(userChoice) {
+		
+		case 'e' :
+		
+			cout << "Enter the letter index you want to encrypt." << endl <<
+					"e.g. A=1, B=2" << endl;
+			cin >> encryptNumber;
+		
+			while (encryptNumber > 26) {
+				
+				cout << "Invalid." << endl;
+				cin >> encryptNumber;
+				
+			} 
+			
+			cout << encrypter(encryptNumber, e, n) << endl;
+			break;
+			
+		case 'd' :
+			
+			cout << "Enter the encrypted message you would like to decrypt." << endl;
+			cin >> decryption;
+			
+			cout << decrypter(decryption, d, n) << endl;
+		
+	}
 	
 	return 0;
 	
