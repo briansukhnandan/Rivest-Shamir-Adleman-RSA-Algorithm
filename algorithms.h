@@ -29,9 +29,9 @@ int phi(int n) {
 	
 	//By default, these groups have the identity element 1 in it.
 	//So i will set result = 1 to accomodate for that.
-	int result = 1;
-	
-	for (int i = 2; i <= (n-1); i++) {
+	int result = 0;
+	/* */
+	for (int i = 1; i <= (n-1); i++) {
 		
 		if (gcd(n, i) == 1) {
 			
@@ -47,7 +47,7 @@ int phi(int n) {
 
 int inverseFinder(int a, int n) {
 	
-	int inverse = 2;
+	int inverse = 1;
 	/*
 	do {
 		

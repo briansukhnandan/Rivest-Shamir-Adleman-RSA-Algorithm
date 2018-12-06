@@ -38,6 +38,7 @@ int main() {
 	cin >> e;
 	
 	d = inverseFinder(e, n);
+	cout << d;
 	
 	char userChoice;
 	cout << "Type 'd' to decrypt a message or 'e' to encrypt a message." << endl;
