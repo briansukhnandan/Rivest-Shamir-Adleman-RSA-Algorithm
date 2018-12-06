@@ -1,0 +1,3 @@
+For selecting a value of n, try to pick a prime number that is not that much
+greater than 26, as the program may not be able to calculate it due to the size
+of the number.
