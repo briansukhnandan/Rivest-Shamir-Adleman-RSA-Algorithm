@@ -18,10 +18,6 @@ NOTES ON RSA ENCRYPTION:
 -To decrypt, finally do (c^d)%n to get m, your decrypted message.
 */
 
-//FOR REFERENCE:
-//MY KEY:
-//n = 91, e = 5
-
 int main() {
 	
 	int encryptNumber;
@@ -38,7 +34,8 @@ int main() {
 	cin >> e;
 	
 	d = inverseFinder(e, n);
-	cout << d;
+	
+	cout << "d is:" << d << endl;
 	
 	char userChoice;
 	cout << "Type 'd' to decrypt a message or 'e' to encrypt a message." << endl;

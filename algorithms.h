@@ -2,6 +2,7 @@
 #include <cmath>
 using namespace std;
 
+//Basic use of Euclidean algorithm
 int gcd(int a, int b) {
 	
 	if (b > a) {
@@ -30,7 +31,7 @@ int phi(int n) {
 	//By default, these groups have the identity element 1 in it.
 	//So i will set result = 1 to accomodate for that.
 	int result = 0;
-	/* */
+	
 	for (int i = 1; i <= (n-1); i++) {
 		
 		if (gcd(n, i) == 1) {
@@ -48,16 +49,6 @@ int phi(int n) {
 int inverseFinder(int a, int n) {
 	
 	int inverse = 1;
-	/*
-	do {
-		
-		if (inverse > (n-1)) {
-			return 0;
-		}
-		
-		inverse++;
-			
-	}while ( (a * inverse) % phi(n) != 1);*/
 	
 	do {
 		
