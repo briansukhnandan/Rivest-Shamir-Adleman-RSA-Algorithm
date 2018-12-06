@@ -4,10 +4,8 @@
 using namespace std;
 
 int encrypter(int m, int e, int n) {
-	
-	int product = 1;
-	
-	product = pow(m, e);
+		
+	int product = pow(m, e);
 	product = product%n;
 	
 	int c = product % n; 
@@ -19,13 +17,8 @@ int encrypter(int m, int e, int n) {
 
 int decrypter(int c, int d, int n) {
 	
-	int product = 1;
-	
-	product = pow(c,d);
+	int product = pow(c,d);
 	product = product%n;
-	
-	cout << product << endl;
-
 	
 	return product;
 }
