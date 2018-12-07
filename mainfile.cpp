@@ -43,26 +43,37 @@ int main() {
 		
 		case 'e' :
 		
-			cout << "Enter the letter index you want to encrypt." << endl <<
-					"e.g. A=1, B=2" << endl;
-			cin >> encryptNumber;
-		
-			while (encryptNumber > 26) {
-				
-				cout << "Invalid." << endl;
-				cin >> encryptNumber;
-				
-			} 
+			cout << "Enter a number to encrypt. Type 0 when your message is finished." << endl;
+			while (cin >> encryptNumber) {
 			
-			cout << encrypter(encryptNumber, e, n) << endl;
+		
+				while (encryptNumber > n) {
+					
+					cout << "Invalid." << endl;
+					cin >> encryptNumber;
+					
+				} 
+				
+				if (userChoice == 0) break;
+				
+				cout << encrypter(encryptNumber, e, n) << endl;
+			
+			}
+			
 			break;
 			
 		case 'd' :
 			
 			cout << "Enter the encrypted message you would like to decrypt." << endl;
-			cin >> decryption;
+			while (cin >> decryption) {
+				
+				cout << decrypter(decryption, d, n) << endl;
+				
+			}
 			
-			cout << decrypter(decryption, d, n) << endl;
+			break;
+			
+			
 		
 	}
 	
